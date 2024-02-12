@@ -1,0 +1,88 @@
+body {
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: center;
+  width: 100vw; /* Adjusted to use viewport width */
+  height: 100vh;
+  background-size: contain;
+  background-color: whitesmoke; /* Background color */
+}
+
+/*body {
+  width: 50vw;
+  height: 50vh;
+  background-image: url("https://cdn.glitch.global/ed02a156-c2bf-4d77-bc32-3735820b9435/banan_1.gif?v=1707302707708");
+  background-repeat:no-repeat;
+  background-size: contain;
+  background-position: center center;
+  } */
+body.completed {
+  /*background: radial-gradient(LemonChiffon, Whitesmoke);/* 
+  background: radial-gradient(Yellow, Whitesmoke);/* Replace with the color you want */
+background: radial-gradient(#faf56e, #F5F5F5);
+cursor: pointer;
+}
+
+
+
+#dotContainer {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  z-index: 2;
+  width: 70vw;
+  height: 70vh;
+  margin-top: -35vh;
+  margin-left: -35vw;
+  cursor: pointer;
+  /* border: 1px solid red; */
+}
+
+body.completed #dotContainer {
+  display: none;
+}
+
+#bild {
+  width: 80vw;
+  height: 80vh;
+  background-image: url("https://cdn.glitch.global/ed02a156-c2bf-4d77-bc32-3735820b9435/banan_1.gif?v=1707302707708"); 
+  background-repeat:no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+body:not(.completed) #bild {
+  display: none;
+}
+
+body.completed #bild {
+ display: block;
+  
+}
+
+.dot {
+  position: absolute; /* Position dots absolutely within the dot container */
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot:not(.clicked) {
+  background-color: lightgray;
+  
+}
+
+.dot.clicked {
+  background-color: yellow;
+}
+
+#imageContainer {
+    position: absolute;
+    z-index: 1; /* Set z-index lower than the "completed" image */
+}
