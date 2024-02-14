@@ -10,6 +10,28 @@ body {
   background-size: contain;
   background-color: whitesmoke; /* Background color */
 }
+a:link, a:visited {
+  color: yellow;
+  text-shadow: 2px 2px 13px black;
+  text-decoration: none;
+}
+p1{
+  position:fixed;
+  margin-top: -90vh;
+  margin-left: 90vw;
+}
+p3{
+  position:fixed;
+
+  margin-top: -90vh;
+  margin-left: -90vw;
+}
+p2{
+  position:fixed;
+  color: darkgrey;
+  margin-top: -90vh;
+  
+}
 
 /*body {
   width: 50vw;
